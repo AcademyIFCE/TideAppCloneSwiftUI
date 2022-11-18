@@ -14,6 +14,8 @@
 		06A514932926A5850006296E /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A514922926A5850006296E /* TimerView.swift */; };
 		06A514952926A80C0006296E /* BottomTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A514942926A80C0006296E /* BottomTimerView.swift */; };
 		06A514972926AC5E0006296E /* FocusModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A514962926AC5E0006296E /* FocusModeView.swift */; };
+		06A5149E2927F2420006296E /* FocusModeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A5149D2927F2420006296E /* FocusModeRowView.swift */; };
+		06A514A02927F5200006296E /* FocusModeRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A5149F2927F5200006296E /* FocusModeRowModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		06A514922926A5850006296E /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		06A514942926A80C0006296E /* BottomTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTimerView.swift; sourceTree = "<group>"; };
 		06A514962926AC5E0006296E /* FocusModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeView.swift; sourceTree = "<group>"; };
+		06A5149D2927F2420006296E /* FocusModeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeRowView.swift; sourceTree = "<group>"; };
+		06A5149F2927F5200006296E /* FocusModeRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeRowModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +80,8 @@
 		06A514982926AF930006296E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				06A5149B2926AFBC0006296E /* FocusMode */,
 				06A514992926AF9C0006296E /* ContentView */,
+				06A5149B2926AFBC0006296E /* FocusMode */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -104,8 +108,18 @@
 			isa = PBXGroup;
 			children = (
 				06A514962926AC5E0006296E /* FocusModeView.swift */,
+				06A5149C2927F2280006296E /* Components */,
+				06A5149F2927F5200006296E /* FocusModeRowModel.swift */,
 			);
 			path = FocusMode;
+			sourceTree = "<group>";
+		};
+		06A5149C2927F2280006296E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				06A5149D2927F2420006296E /* FocusModeRowView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,11 +192,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A514A02927F5200006296E /* FocusModeRowModel.swift in Sources */,
 				06A514932926A5850006296E /* TimerView.swift in Sources */,
 				06A514952926A80C0006296E /* BottomTimerView.swift in Sources */,
 				06A5148729269F820006296E /* ContentView.swift in Sources */,
 				06A514972926AC5E0006296E /* FocusModeView.swift in Sources */,
 				06A5148529269F820006296E /* TideCloneSwiftUIApp.swift in Sources */,
+				06A5149E2927F2420006296E /* FocusModeRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,33 @@ import SwiftUI
 
 struct FocusModeView: View {
 
+    var rowModels: [FocusModeRowModel] = [
+        FocusModeRowModel(
+            gradient: [Color.yellow, Color.orange],
+            iconName: "timer",
+            title: "Timer Mode",
+            description: "Set your goal, keep focused"
+        ),
+        FocusModeRowModel(
+            gradient: [Color.orange, Color.red],
+            iconName: "clock",
+            title: "Work Mode",
+            description: "Based on Pomodoro Techniques"
+        ),
+        FocusModeRowModel(
+            gradient: [Color.red, Color.pink],
+            iconName: "infinity",
+            title: "Infinite Mode",
+            description: "Set your goal, keep focused"
+        ),
+        FocusModeRowModel(
+            gradient: [Color.blue, Color.teal],
+            iconName: "sun.max",
+            title: "Lazy Mode",
+            description: "Just chill"
+        )
+    ]
+
     var body: some View {
         ZStack {
             Color.black.opacity(0.9).ignoresSafeArea()
@@ -22,21 +49,13 @@ struct FocusModeView: View {
                 Spacer()
 
                 // MARK: - TODO: Transformar numa ScrollView e Componentizar
-                VStack {
-                    HStack(spacing: 20) {
-                        Image(systemName: "clock")
-                            .font(Font.system(size: 30))
-                            .padding()
-                            .background(Color.yellow)
-                            .foregroundColor(.white)
-                            .clipShape(Circle())
-                        VStack(alignment: .leading) {
-                            Text("Timer Mode")
-                            Text("Set your goal, keep focused")
+                ScrollView {
+                    VStack(spacing: 24) {
+                        ForEach(rowModels, id: \.title) { model in //#2 work mode
+                            FocusModeRowView(model: model)
                         }
-                        Spacer()
                     }
-                    .padding(25)
+                    .padding(.horizontal, 20)
                 }
                 .foregroundColor(.white)
             }
@@ -49,7 +68,12 @@ struct FocusModeView_Previews: PreviewProvider {
         Color
             .gray
             .ignoresSafeArea()
-            .sheet(isPresented: Binding(get: { true }, set: { _ in })) {
+            .sheet(
+                isPresented: Binding(
+                    get: { true },
+                    set: { _ in }
+                )
+            ) {
                 FocusModeView()
                     .presentationDetents([.fraction(0.35)])
             }
