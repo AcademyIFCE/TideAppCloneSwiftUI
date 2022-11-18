@@ -20,22 +20,10 @@ struct ContentView: View {
             VStack {
                 TimerView()
 
-                // MARK: - TODO: Usar a BottomTimerView passando pra ela por parametro a closure que seta showingFocusMode do button abaixo
-                HStack(spacing: 30) {
-                    Button(
-                        action: {
-                            showingFocusMode = true
-                        },
-                        label: {
-                            VStack(spacing: 10) {
-                                Image(systemName: "clock")
-                                    .font(Font.system(size: 24))
-                                Text("Focus Mode")
-                                    .foregroundColor(.white.opacity(0.15))
-                            }
-                        }
-                    )
-                }
+                // MARK: - TODO: Fazer transição para o sheet de Sound Scenes
+                BottomTimerView(
+                    bindingShowingFocusMode: $showingFocusMode
+                )
             }
             .foregroundColor(grayForegroundColor)
         }

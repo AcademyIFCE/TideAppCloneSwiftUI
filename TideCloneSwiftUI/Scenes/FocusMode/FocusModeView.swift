@@ -48,7 +48,6 @@ struct FocusModeView: View {
 
                 Spacer()
 
-                // MARK: - TODO: Transformar numa ScrollView e Componentizar
                 ScrollView {
                     VStack(spacing: 24) {
                         ForEach(rowModels, id: \.title) { model in //#2 work mode

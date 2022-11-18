@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct BottomTimerView: View {
+
+    @Binding var bindingShowingFocusMode: Bool
+
     var body: some View {
+
+        // MARK: - TODO: ScrollView com o Button Componentizado
         HStack(spacing: 30) {
             Button(
                 action: {
-                    print("Focus Mode")
+                    bindingShowingFocusMode = true
                 },
                 label: {
                     VStack(spacing: 10) {
@@ -25,7 +30,7 @@ struct BottomTimerView: View {
             )
             Button(
                 action: {
-                    print("Focus Mode")
+                    print("Focus Tags")
                 },
                 label: {
                     VStack(spacing: 10) {
@@ -38,7 +43,7 @@ struct BottomTimerView: View {
             )
             Button(
                 action: {
-                    print("Focus Mode")
+                    print("Sound Scenes")
                 },
                 label: {
                     VStack(spacing: 10) {
@@ -50,11 +55,5 @@ struct BottomTimerView: View {
                 }
             )
         }
-    }
-}
-
-struct BottomTimerView_Previews: PreviewProvider {
-    static var previews: some View {
-        BottomTimerView()
     }
 }
